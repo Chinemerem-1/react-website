@@ -1,124 +1,76 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+
 import './App.css'
+import About from './pages/About'
+import Blog from './pages/Blog'
+import Contact from './pages/Contact'
+import Home from './pages/Home'
+import Navbar from './pages/Navbar'
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  // const description = "I am a react developer"
+  // const description2 = "I am a react developer"
+  // const description3 = "I am a react developer"
+  // const description4 = "I am a react developer"
+  // const description5 = "I am a react developer"
+
+
+  // const styles = {
+  //   backgroundColor: "red",
+  //   width: 400
+  // }
+
+  // const styles2 = {
+  //   backgroundColor: "green",
+  //   width: 400
+  // }
+
+  // const styles3 = {
+  //   backgroundColor: "purple",
+  //   width: 400
+  // }
+
+  // const styles4 = {
+  //   backgroundColor: "blue",
+  //   width: 400
+  // }
+
+  // const styles5 = {
+  //   backgroundColor: "orange",
+  //   width: 400
+  // }
+
+  // const text1 = "I am "
+  // const text2 = 30
+  // const text3 = " years old."
+
+  // const styleN = {
+  //   backgroundColor: "green",
+  //   width: 200,
+  //   color: "white"
+  // }
 
   return (
     <>
-    <div className='whole'>
-      <div className='opa'>
-        <section id="center">
-          <div className="hero">
-            <img src={heroImg} className="base" width="170" height="179" alt="" />
-            <img src={reactLogo} className="framework" alt="React logo" />
-            <img src={viteLogo} className="vite" alt="Vite logo" />
-          </div>
-          <div>
-            <h1>Get started</h1>
-            <p>
-              Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-            </p>
-          </div>
-          <button
-            type="button"
-            className="counter"
-            onClick={() => setCount((count) => count + 1)}
-          >
-            Count is {count}
-          </button>
-        </section>
+      {/* <div className='bg-image'>
+        <h1 style={styles} >{description}</h1>
+        <p style={styles2}>{description2}</p>
+        <p style={styles3}>{description3}</p>
+        <p style={styles4}>{description4}</p>
+        <p style={styles5}>{description5}</p>
 
-        <div className="ticks"></div>
+        <p style={styleN}>{text1 + text2 + text3}</p>
+      </div> */}
 
-        <section id="next-steps">
-          <div id="docs">
-            <svg className="icon" role="presentation" aria-hidden="true">
-              <use href="/icons.svg#documentation-icon"></use>
-            </svg>
-            <h2>Documentation</h2>
-            <p>Your questions, answered</p>
-            <ul>
-              <li>
-                <a href="https://vite.dev/" target="_blank">
-                  <img className="logo" src={viteLogo} alt="" />
-                  Explore Vite
-                </a>
-              </li>
-              <li>
-                <a href="https://react.dev/" target="_blank">
-                  <img className="button-icon" src={reactLogo} alt="" />
-                  Learn more
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div id="social">
-            <svg className="icon" role="presentation" aria-hidden="true">
-              <use href="/icons.svg#social-icon"></use>
-            </svg>
-            <h2>Connect with us</h2>
-            <p>Join the Vite community</p>
-            <ul>
-              <li>
-                <a href="https://github.com/vitejs/vite" target="_blank">
-                  <svg
-                    className="button-icon"
-                    role="presentation"
-                    aria-hidden="true"
-                  >
-                    <use href="/icons.svg#github-icon"></use>
-                  </svg>
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href="https://chat.vite.dev/" target="_blank">
-                  <svg
-                    className="button-icon"
-                    role="presentation"
-                    aria-hidden="true"
-                  >
-                    <use href="/icons.svg#discord-icon"></use>
-                  </svg>
-                  Discord
-                </a>
-              </li>
-              <li>
-                <a href="https://x.com/vite_js" target="_blank">
-                  <svg
-                    className="button-icon"
-                    role="presentation"
-                    aria-hidden="true"
-                  >
-                    <use href="/icons.svg#x-icon"></use>
-                  </svg>
-                  X.com
-                </a>
-              </li>
-              <li>
-                <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                  <svg
-                    className="button-icon"
-                    role="presentation"
-                    aria-hidden="true"
-                  >
-                    <use href="/icons.svg#bluesky-icon"></use>
-                  </svg>
-                  Bluesky
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <div className="ticks"></div>
-        <section id="spacer"></section>
-      </div>
-    </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/About" element={<About />}/>
+          <Route path="/Contact" element={<Contact />}/>
+          <Route path="/Blog" element={<Blog />}/>
+        </Routes>
+      </Router>
     </>
   )
 }
