@@ -4,7 +4,6 @@ import About from './pages/About'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
-import Navbar from './pages/Navbar'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 function App() {
@@ -54,7 +53,7 @@ function App() {
   return (
     <>
       {/* <div className='bg-image'>
-        <h1 style={styles} >{description}</h1>
+        <h1 style={styles}>{description}</h1>
         <p style={styles2}>{description2}</p>
         <p style={styles3}>{description3}</p>
         <p style={styles4}>{description4}</p>
